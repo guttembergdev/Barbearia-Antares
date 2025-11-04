@@ -1,0 +1,454 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+ 
+
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+/* ===== ESTILO PERSONALIZADO ===== */
+html, body {
+    background-color: #333;
+    color: white;
+    min-height: 100vh;
+}
+
+.layout-clientes {
+    display: flex;
+    align-items: flex-start;
+}
+
+.imagem-lateral {
+    width: 500px;
+    height: 400px;
+    background-image: url('img/LogoAPPBarbearias.png');
+    background-size: cover;
+    background-position: center 80px;
+    margin-top: 100px;
+}
+
+table {
+    background-color: #333;
+}
+
+.campo-busca {
+    background-color: #333; /* cinza escuro */
+    color: #fff; /* texto branco */
+    border: 1px solid #555; /* borda cinza mais clara */
+    border-radius: 4px; /* cantos levemente arredondados */
+}
+
+    /* Placeholder mais suave */
+    .campo-busca::placeholder {
+        color: rgba(255,255,255,0.6);
+    }
+
+    /* Ao focar, mantém o fundo e destaca a borda */
+    .campo-busca:focus {
+        background-color: #333;
+        border: 1px solid #fff;
+        box-shadow: none;
+    }
+/* Estilo personalizado para o botão Meus Agendamentos */
+.btn-meus-agendamentos {
+    background-color: #333; /* azul marinho */
+    color: #fff; /* texto branco */
+    border: none; /* sem borda */
+}
+
+    /* Efeito ao passar o mouse */
+    .btn-meus-agendamentos:hover {
+        background-color: #333; /* azul marinho mais claro */
+        color: #fff;
+    }
+/* Botão menor e discreto */
+.btn-idioma {
+    margin-left: 525px; /* empurra 20px para a direita */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 14px;
+}
+
+    .btn-idioma:hover {
+        background-color: #444;
+    }
+
+/* Itens do modal */
+#idiomaModal .idioma-item {
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+    #idiomaModal .idioma-item:hover {
+        background-color: #333;
+    }
+.btn-agende-agora {
+    position: absolute;
+    top: 110px;
+    right: 475px;
+    background-color: #664300 !important;
+    color: #fff;
+    border-radius: 20px;
+    padding: 6px 14px;
+    animation: pulse 2s infinite;
+    z-index: 2000;
+}
+
+
+
+.hidden {
+    display: none !important;
+}
+
+
+
+.btn-agende-agora:hover {
+    background-color: #664300; /*marrom escuro */
+    color: #000;
+}
+
+
+@media (max-width: 768px) {
+    .btn-agende-agora {
+        right: 20px; /* ajusta pra caber na tela pequena */
+        top: 90px; /* mantém altura proporcional */
+        padding: 6px 14px;
+        font-size: 14px;
+    }
+}
+
+
+
+/* Animação de pulsar */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(192,192,192, 0.7);
+    }
+
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(192,192,192, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(192,192,192, 0);
+    }
+}
+
+.like-container {
+    margin-left: auto;
+    margin-right: 650px;
+    position: relative;
+    top: 23px; /* desce 15px sem afetar os outros */
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+
+.nome-barbearia {
+    color: #fff;
+    font-size: 23px;
+    font-weight: 600;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    /* leve brilho ao redor */
+    text-shadow: 0 0 4px#fff;
+    /* mesma cor, brilho suave */
+}
+
+
+.icone-lateral {
+    margin-left: 100px; /* empurra o contêiner para a direita */
+    margin-top: 10px; /* valor negativo sobe o bloco */
+}
+
+    .icone-lateral img {
+        width: 85px;
+        height: 85px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+.painel-lateral {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 380px;
+    background-color: #664300;     /* marrom escuro */
+  
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+    z-index: 999;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    /* altura automática para exibir tudo */
+    height: auto;
+    overflow: visible;
+    /* removido: barra de rolagem interna */
+    scrollbar-width: none;
+}
+
+    /* Chrome, Edge, Safari — removido para evitar rolagem interna */
+    .painel-lateral::-webkit-scrollbar {
+        display: none;
+    }
+
+.bloco {
+    margin-bottom: 20px;
+}
+
+    .bloco h3 {
+        margin-bottom: 8px;
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+    .bloco p,
+    .bloco ul {
+        font-size: 15px;
+        color: #ffffff;
+        line-height: 1.4;
+    }
+
+    .bloco ul {
+        padding-left: 20px;
+        margin: 0;
+    }
+
+.icones-redes {
+    display: flex;
+    gap: 10px;
+}
+
+    .icones-redes img {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        filter: brightness(1.2);
+    }
+    
+.img-central {
+    /* Posicionamento */
+    position: relative;
+    top: 85px;
+    left: 10px;
+    margin-top: 820px;
+    transform: translateY(-900px); /* cuidado: isso pode anular o top/margin */
+    /* Tamanho do contêiner (opcional) */
+    width: 80%; /* ou defina um tamanho fixo se quiser controlar melhor */
+    height: 100px;
+}
+
+    .img-central img {
+        margin-left: 20px; /* empurra a imagem 20px para a direita */
+        /* Tamanho da imagem em relação ao contêiner pai */
+        width: 85%;
+        height: 430%;
+        object-fit: contain;
+    }
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.img-central img:hover {
+    animation: pulse 0.4s ease-in-out;
+}
+
+#btnGoogleLogin {
+    background-color: #664300; /* marrom terro*/
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 6px;
+}
+
+    #btnGoogleLogin:hover {
+        background-color: #003366; /* tom mais claro no hover */
+        transform: scale(1.03);
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    }
+
+    #btnGoogleLogin img {
+        border-radius: 50%;
+    }
+
+
+.btn-azul-marinho {
+    background-color: #664300;
+    transform: scale(1.03);
+    border: none;
+    padding: 10px 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+    .btn-azul-marinho:hover {
+        background-color: #664300;
+    }
+
+@media (max-width: 768px) {
+    .campo-busca {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .btn-meus-agendamentos {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .modal-dialog {
+        margin: 1rem;
+    }
+
+    .navbar-brand img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* Evita travar largura */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn,
+.form-control {
+    max-width: 100%;
+}
+
+/* Responsivo no mobile */
+@media (max-width: 768px) {
+    .d-flex {
+        flex-wrap: wrap;
+    }
+
+    .btn,
+    .form-control {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    
+
+    .icone-lateral {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .painel-lateral {
+        padding: 1rem;
+    }
+
+    .img-central img {
+        width: 100%;
+        max-width: 150px;
+    }
+    .like-container {
+    margin-right: 20px; /* substitui os 650px só no mobile */
+    top: 15px; /* ajusta a altura suavemente */
+  }
+
+
+
+
+}
+
+/*Segunda Navbar*/
+
+.navbar-segunda {
+    background-color: #664300 !important;
+    width: 60%;
+    height: 60px;
+    position: absolute; /* fica solta, não empurra a logo */
+    top: 650px; /* controla a distância do topo da página */
+    left: 450px;
+    transform: translateX(-50%); /* centraliza horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+    .navbar-segunda a {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+        .navbar-segunda a:hover {
+            color: #f39c12;
+        }
+
+
+
+/* Botõa entrar */
+.btn-outline-light {
+    background-color: #333;
+    border-color: #333; /* cor da borda */
+    color: #ffffff; /* cor do texto */
+}
+
+    .btn-outline-light:hover {
+        background-color: #333; /* cor de fundo ao passar o mouse */
+        color: #ffffff; /* cor do texto no hover */
+    }
